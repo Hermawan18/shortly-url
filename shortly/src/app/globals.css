@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 18px;
+  color: hsl(255, 11%, 22%);
+  background-color: red;
+}
