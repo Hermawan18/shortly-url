@@ -7,6 +7,7 @@ import FullyCustom from '@/app/assets/images/icon-fully-customizable.svg';
 import Footer from '@/app/assets/images/bg-boost-mobile.svg';
 
 import Image from 'next/image';
+import ResultGenerate from './components/resultGenerate';
 
 export default function Home() {
   return (
@@ -57,22 +58,26 @@ export default function Home() {
         <div className="my-4 lg:order-1">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">More than just</h1>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">shorter links</h1>
-          <p className="text-gray">Build your brand's recognition and get detailed insights on how your links are performing</p>
+          <p className="text-gray">{"Build your brand's recognition and get detailed insights on how your links are performing"}</p>
         </div>
       </div>
       {/* end banner */}
 
       {/* form input */}
-      <div className="relative overflow-hidden rounded-lg bg-grayish-violet p-5 h-36 my-10 mx-3 lg:mx-0">
+      <div className="relative overflow-hidden rounded-lg bg-grayish-violet p-5 h-36 mt-10 mb-3 mx-3 lg:mx-0 lg:my-0">
         <Image src={BgForm} alt="backgroun form" className="absolute -z-0 top-0 right-0" />
-        <form className="absolute z-10 left-3 top-3 right-3 bottom-3 flex flex-col py-1">
-          <input type="text" placeholder="Shorten a link here..." className="my-3 rounded-lg h-10 px-3" />
-          <button type="submit" className="bg-cyan text-white rounded-lg h-10">
+        <form className="absolute z-10 left-3 top-7 right-3 bottom-3 flex flex-col lg:flex-row py-1">
+          <input type="text" placeholder="Shorten a link here..." className="my-3 rounded-lg h-10 px-3 lg:grow " />
+          <button type="submit" className="bg-cyan text-white rounded-lg h-10 lg:my-[13.5px] lg:ms-2 lg:p-2">
             Shorten it!
           </button>
         </form>
       </div>
       {/* end form input */}
+
+      {/* result short link */}
+      <ResultGenerate />
+      {/* end result short link */}
 
       {/* profit */}
       <div className="text-center bg-sky pt-2 lg:h-[800px] lg:mx-0 pb-20 lg:px-2 md:pb-3">
@@ -88,7 +93,7 @@ export default function Home() {
               <Image src={BrandRecognition} alt="Brand Recognition" className="mx-auto" />
             </div>
             <h1 className="text-2xl font-bold mb-5 ">Brand Recognition</h1>
-            <p className="text-gray">Boost your brand recognition with each click. Generic links dont't mean a thing. Branded links help instil confidence in your content.</p>
+            <p className="text-gray">{"Boost your brand recognition with each click. Generic links dont't mean a thing. Branded links help instil confidence in your content."}</p>
           </div>
 
           <div className="bg-cyan lg:w-12 w-2 lg:h-2 h-12 m-auto lg:my-auto lg:mx-0"></div>
