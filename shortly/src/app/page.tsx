@@ -1,13 +1,18 @@
 import Logo from '@/app/assets/images/logo.svg';
 import WorkIlustration from '@/app/assets/images/illustration-working.svg';
 import BgForm from '@/app/assets/images/bg-shorten-mobile.svg';
+import BrandRecognition from '@/app/assets/images/icon-brand-recognition.svg';
+import DetailedRecord from '@/app/assets/images/icon-detailed-records.svg';
+import FullyCustom from '@/app/assets/images/icon-fully-customizable.svg';
+import Footer from '@/app/assets/images/bg-boost-mobile.svg';
+
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="lg:mx-80 md:mx-32 my-6 mx-3">
+    <div className="lg:mx-28 md:mx-32 pt-6">
       {/* navbar */}
-      <div className="flex justify-between md:justify-normal">
+      <div className="flex justify-between md:justify-normal mx-3">
         <a href="#">
           <Image src={Logo} alt="logo" />
         </a>
@@ -44,21 +49,21 @@ export default function Home() {
       {/* end navbar */}
 
       {/* banner */}
-      <div className="text-center my-4">
-        <div className="overflow-hidden">
-          <Image src={WorkIlustration} alt="work ilustration" className="ms-10" />
+      <div className="text-center lg:text-left my-4 mx-3 lg:flex">
+        <div className="overflow-hidden lg:order-2">
+          <Image src={WorkIlustration} alt="work ilustration" className="ms-10 md:ms-28 lg:m-auto" />
         </div>
 
-        <div className="my-4">
-          <h1 className="text-4xl font-bold">More than just</h1>
-          <h1 className="text-4xl font-bold mb-3">shorter links</h1>
+        <div className="my-4 lg:order-1">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">More than just</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">shorter links</h1>
           <p className="text-gray">Build your brand's recognition and get detailed insights on how your links are performing</p>
         </div>
       </div>
       {/* end banner */}
 
       {/* form input */}
-      <div className="relative overflow-hidden rounded-lg bg-grayish-violet p-5 h-36 my-10">
+      <div className="relative overflow-hidden rounded-lg bg-grayish-violet p-5 h-36 my-10 mx-3 lg:mx-0">
         <Image src={BgForm} alt="backgroun form" className="absolute -z-0 top-0 right-0" />
         <form className="absolute z-10 left-3 top-3 right-3 bottom-3 flex flex-col py-1">
           <input type="text" placeholder="Shorten a link here..." className="my-3 rounded-lg h-10 px-3" />
@@ -68,6 +73,55 @@ export default function Home() {
         </form>
       </div>
       {/* end form input */}
+
+      {/* profit */}
+      <div className="text-center bg-sky pt-2 lg:h-[800px] lg:mx-0 pb-20 lg:px-2 md:pb-3">
+        <div className="mt-14">
+          <h1 className="text-2xl font-bold mb-5 ">Advanced Statistics</h1>
+          <p className="text-gray">Track how links are performing across the web with our advanced statistics dashbord.</p>
+        </div>
+
+        <div className="lg:flex lg:justify-center lg:mt-24">
+          {/* brand recognitioin */}
+          <div className="bg-white rounded-md relative lg:mt-0 mt-24 pt-16 pb-3 px-3 lg:px-5 lg:w-[300px] lg:me-0 mx-3 ">
+            <div className="absolute left-1/2 -top-1/2 lg:-top-1/4 -translate-x-1/2 translate-y-1/2 lg:translate-y-1/4 bg-dark-violet w-24 py-8 rounded-full">
+              <Image src={BrandRecognition} alt="Brand Recognition" className="mx-auto" />
+            </div>
+            <h1 className="text-2xl font-bold mb-5 ">Brand Recognition</h1>
+            <p className="text-gray">Boost your brand recognition with each click. Generic links dont't mean a thing. Branded links help instil confidence in your content.</p>
+          </div>
+
+          <div className="bg-cyan lg:w-12 w-2 lg:h-2 h-12 m-auto lg:my-auto lg:mx-0"></div>
+
+          {/* detailed record */}
+          <div className=" bg-white rounded-md relative lg:top-5 mt-8 pt-16 pb-3 px-3 lg:px-5 lg:w-[300px] mx-3 lg:mx-0">
+            <div className="absolute left-1/2 -top-1/2 lg:-top-1/4 -translate-x-1/2 translate-y-1/2 lg:translate-y-1/4 bg-dark-violet w-24 py-8 rounded-full">
+              <Image src={DetailedRecord} alt="Detail record" className="mx-auto" />
+            </div>
+            <h1 className="text-2xl font-bold mb-5 ">Detialed Record</h1>
+            <p className="text-gray">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+          </div>
+
+          <div className="bg-cyan lg:w-12 w-2 lg:h-2 h-12 m-auto lg:my-auto lg:mx-0"></div>
+
+          {/* fully customizable */}
+          <div className="bg-white rounded-md relative lg:top-20 mt-8 pt-16 pb-3 px-3 lg:px-5 lg:w-[300px] mx-3 lg:ms-0">
+            <div className="absolute left-1/2 -top-1/2 lg:-top-1/4 -translate-x-1/2 translate-y-1/2 lg:translate-y-1/4 bg-dark-violet w-24 py-8 rounded-full">
+              <Image src={FullyCustom} alt="fully custom" className="mx-auto" />
+            </div>
+            <h1 className="text-2xl font-bold mb-5 ">Fully customizable</h1>
+            <p className="text-gray">Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+          </div>
+        </div>
+      </div>
+      {/* end profit */}
+
+      {/* footer */}
+      <div className="relative overflow-hidden bg-grayish-violet h-40 lg:mt-0">
+        <Image src={Footer} alt="footer" className="absolute top-0 right-0 -z-0" />
+        <h1 className="absolute z-10 top-1/3 left-1/2 -translate-x-1/2 text-2xl lg:text-4xl md:text-3xl text-white font-bold">Boost your links today</h1>
+      </div>
+      {/* end footer */}
     </div>
   );
 }
