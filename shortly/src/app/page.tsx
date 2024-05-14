@@ -63,7 +63,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">More than just</h1>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">shorter links</h1>
           <p className="text-gray">{"Build your brand's recognition and get detailed insights on how your links are performing"}</p>
-          <button className="bg-cyan lg:text-xl rounded-full py-4 px-6 text-white lg:mt-10">Get Started</button>
+          <button className="bg-cyan lg:text-xl rounded-full py-4 px-6 text-white mt-10">Get Started</button>
         </div>
       </div>
       {/* end banner */}
@@ -122,12 +122,12 @@ export default function Home() {
       {/* end footer */}
 
       {/* footer 1 */}
-      <div className="lg:flex bg-black text-white py-20 px-4">
-        <div className="lg:w-1/3">
+      <div className="lg:flex bg-black text-white text-center py-20 px-4">
+        <div className="lg:w-1/3 mb-20">
           <Image src={LogoFooter} alt="logo footer" className="m-auto" />
         </div>
 
-        <div className="lg:grow">
+        <div className="lg:grow mb-10">
           <h1 className="mb-5">Features</h1>
           <ul className="text-slate-400">
             <li>
@@ -142,7 +142,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="lg:grow">
+        <div className="lg:grow mb-10">
           <h1 className="mb-5">Resources</h1>
           <ul className="text-slate-400">
             <li>
@@ -157,7 +157,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="lg:grow">
+        <div className="lg:grow mb-10">
           <h1 className="mb-5">Company</h1>
           <ul className="text-slate-400">
             <li>
@@ -175,7 +175,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="lg:flex lg:grow gap-4">
+        <div className="flex lg:grow gap-4 lg:justify-normal justify-center">
           <div>
             <Image src={Facebook} alt="facebook" />
           </div>
