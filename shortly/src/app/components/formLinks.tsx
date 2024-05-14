@@ -9,7 +9,7 @@ import { FormEvent } from 'react';
 import { ClipLoader, BarLoader } from 'react-spinners';
 import { TypeLink, TypeFetchLinks, TypeErrFetch } from '@/type';
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl: string = process.env.NEXT_PUBLIC_BASE_URL ? process.env.NEXT_PUBLIC_BASE_URL : 'http://localhost:3000';
 
 const override: CSSProperties = {
   display: 'block',
