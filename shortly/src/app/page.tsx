@@ -12,7 +12,6 @@ import Instagram from '@/app/assets/images/icon-instagram.svg';
 
 import Image from 'next/image';
 import FormLinks from './components/formLinks';
-import ButtonBar from './components/buttonBar';
 import Navbar from './components/navbar';
 
 export default function Home() {

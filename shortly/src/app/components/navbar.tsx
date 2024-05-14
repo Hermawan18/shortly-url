@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import ButtonBar from './buttonBar';
 import VisibleNavbar from './visibleNavbar';
 
 import Logo from '@/app/assets/images/logo.svg';
