@@ -1,5 +1,3 @@
-import { z } from 'zod';
-
 interface LinkRequest {
   destination: string;
   domain: {
@@ -8,9 +6,11 @@ interface LinkRequest {
 }
 
 let endpoint: string = 'https://api.rebrandly.com/v1/links';
-let headers = {
+let rebrandlyApi: string = process.env.REBRANDLY_API ? process.env.REBRANDLY_API : '';
+
+let headers: HeadersInit = {
   'Content-Type': 'application/json',
-  apikey: 'b5eba4d130b4453c91442d9bd763c53b',
+  apikey: rebrandlyApi,
 };
 
 export async function GET() {
