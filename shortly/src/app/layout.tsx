@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
-import Icon from '@/app/assets/images/favicon-32x32.png';
 import './globals.css';
 
 const poppins = Poppins({ weight: ['500', '700'], subsets: ['latin'] });
