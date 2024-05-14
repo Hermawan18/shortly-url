@@ -22,6 +22,11 @@ export async function GET() {
   const links = await apiResponse.json();
   return Response.json({
     statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
     message: 'Success get links',
     data: links,
   });
@@ -61,6 +66,11 @@ export async function POST(request: Request) {
 
   return Response.json({
     statusCode: 201,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
     message: 'Success short link',
     data: links,
   });
