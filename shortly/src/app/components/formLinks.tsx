@@ -69,7 +69,7 @@ export default function FormLinks() {
         <Image src={BgForm} alt="backgroun form" className="absolute -z-0 top-0 right-0" />
         <form onSubmit={handleSubmit} className="absolute z-10 left-3 top-7 right-3 bottom-3 flex flex-col lg:flex-row py-1">
           <div className="lg:grow ">
-            <input type="text" onChange={handleInput} placeholder="Shorten a link here..." className="my-3 rounded-lg h-10 px-3 lg:w-full lg:mb-1" />
+            <input type="text" onChange={handleInput} placeholder="Shorten a link here..." className="my-3 rounded-lg h-10 px-3 w-full lg:mb-1" />
             {errMsg ? <p className="text-red lg:ps-2">{errMsg}</p> : null}
           </div>
           <button type="submit" className="bg-cyan text-white rounded-lg h-10 lg:my-[13.5px] lg:ms-2 lg:p-2">
