@@ -1,9 +1,14 @@
 import Logo from '@/app/assets/images/logo.svg';
+import LogoFooter from '@/app/assets/images/logo-footer.svg';
 import WorkIlustration from '@/app/assets/images/illustration-working.svg';
 import BrandRecognition from '@/app/assets/images/icon-brand-recognition.svg';
 import DetailedRecord from '@/app/assets/images/icon-detailed-records.svg';
 import FullyCustom from '@/app/assets/images/icon-fully-customizable.svg';
 import Footer from '@/app/assets/images/bg-boost-mobile.svg';
+import Facebook from '@/app/assets/images/icon-facebook.svg';
+import Twitter from '@/app/assets/images/icon-twitter.svg';
+import Pinterest from '@/app/assets/images/icon-pinterest.svg';
+import Instagram from '@/app/assets/images/icon-instagram.svg';
 
 import Image from 'next/image';
 import FormLinks from './components/formLinks';
@@ -118,6 +123,77 @@ export default function Home() {
         <h1 className="absolute z-10 top-1/3 left-1/2 -translate-x-1/2 text-2xl lg:text-4xl md:text-3xl text-white font-bold">Boost your links today</h1>
       </div>
       {/* end footer */}
+
+      {/* footer 1 */}
+      <div className="lg:flex bg-black text-white py-20 px-4">
+        <div className="lg:w-1/3">
+          <Image src={LogoFooter} alt="logo footer" className="m-auto" />
+        </div>
+
+        <div className="lg:grow">
+          <h1 className="mb-5">Features</h1>
+          <ul className="text-slate-400">
+            <li>
+              <a href="#">Link Shortening</a>
+            </li>
+            <li>
+              <a href="#">Branded Links</a>
+            </li>
+            <li>
+              <a href="#">Analytics</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="lg:grow">
+          <h1 className="mb-5">Resources</h1>
+          <ul className="text-slate-400">
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Developers</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="lg:grow">
+          <h1 className="mb-5">Company</h1>
+          <ul className="text-slate-400">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Our Team</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="lg:flex lg:grow gap-4">
+          <div>
+            <Image src={Facebook} alt="facebook" />
+          </div>
+          <div>
+            <Image src={Twitter} alt="twitter" />
+          </div>
+          <div>
+            <Image src={Pinterest} alt="pinterests" />
+          </div>
+          <div>
+            <Image src={Instagram} alt="Instagram" />
+          </div>
+        </div>
+      </div>
+      {/* end footer 1 */}
     </div>
   );
 }
