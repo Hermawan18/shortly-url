@@ -1,44 +1,44 @@
 export interface TypeLink {
-  id: String;
-  title: String;
-  slashtag: String;
-  destination: String;
+  id: string;
+  title: string;
+  slashtag: string;
+  destination: string;
   createdAt: Date;
   updatedAt: Date;
   expiredAt: Date;
-  status: String;
-  tags: String[];
-  linkType: String;
-  clicks: Number;
-  isPublic: Boolean;
-  shortUrl: String;
-  domainId: String;
-  domainName: String;
+  status: string;
+  tags: string[];
+  linkType: string;
+  clicks: number;
+  isPublic: boolean;
+  shortUrl: string;
+  domainId: string;
+  domainName: string;
   domain: {
-    id: String;
-    ref: String;
-    fullName: String;
+    id: string;
+    ref: string;
+    fullName: string;
     sharing: {
       protocol: {
-        allowed: String[];
-        default: String;
+        allowed: string[];
+        default: string;
       };
     };
-    active: Boolean;
+    active: boolean;
   };
-  https: Boolean;
-  favourite: Boolean;
+  https: boolean;
+  favourite: boolean;
   creator: {
-    id: String;
-    fullName: String;
-    avatarUrl: String;
+    id: string;
+    fullName: string;
+    avatarUrl: string;
   };
-  integrated: Boolean;
+  integrated: boolean;
 }
 
 export interface TypeFetchLinks {
-  statusCode: Number;
-  message: String;
+  statusCode: number;
+  message: string;
   data: TypeLink[];
 }
 

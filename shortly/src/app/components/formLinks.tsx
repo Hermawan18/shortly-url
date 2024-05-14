@@ -19,7 +19,7 @@ const override: CSSProperties = {
 
 export default function FormLinks() {
   const [links, setLinks] = useState<TypeLink[]>([]);
-  const [inputLink, setInputLink] = useState<String>('');
+  const [inputLink, setInputLink] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [errMsg, setErrMsg] = useState<string>('');
 
