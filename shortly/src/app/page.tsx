@@ -63,6 +63,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">More than just</h1>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">shorter links</h1>
           <p className="text-gray">{"Build your brand's recognition and get detailed insights on how your links are performing"}</p>
+          <button className="bg-cyan lg:text-xl rounded-full py-4 px-6 text-white lg:mt-10">Get Started</button>
         </div>
       </div>
       {/* end banner */}
@@ -70,10 +71,6 @@ export default function Home() {
       {/* form input */}
       <FormLinks />
       {/* end form input */}
-
-      {/* result short link */}
-
-      {/* end result short link */}
 
       {/* profit */}
       <div className="text-center bg-sky pt-2 lg:h-[800px] lg:mx-0 pb-20 lg:px-2 md:pb-3">
