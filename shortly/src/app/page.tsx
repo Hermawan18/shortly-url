@@ -1,17 +1,16 @@
 import Logo from '@/app/assets/images/logo.svg';
 import WorkIlustration from '@/app/assets/images/illustration-working.svg';
-import BgForm from '@/app/assets/images/bg-shorten-mobile.svg';
 import BrandRecognition from '@/app/assets/images/icon-brand-recognition.svg';
 import DetailedRecord from '@/app/assets/images/icon-detailed-records.svg';
 import FullyCustom from '@/app/assets/images/icon-fully-customizable.svg';
 import Footer from '@/app/assets/images/bg-boost-mobile.svg';
 
 import Image from 'next/image';
-import ResultGenerate from './components/resultGenerate';
+import FormLinks from './components/formLinks';
 
 export default function Home() {
   return (
-    <div className="lg:mx-28 md:mx-32 pt-6">
+    <div className="lg:mx-28 md:mx-32 pt-6 lg:pt-14">
       {/* navbar */}
       <div className="flex justify-between md:justify-normal mx-3">
         <a href="#">
@@ -64,19 +63,11 @@ export default function Home() {
       {/* end banner */}
 
       {/* form input */}
-      <div className="relative overflow-hidden rounded-lg bg-grayish-violet p-5 h-36 mt-10 mb-3 mx-3 lg:mx-0 lg:my-0">
-        <Image src={BgForm} alt="backgroun form" className="absolute -z-0 top-0 right-0" />
-        <form className="absolute z-10 left-3 top-7 right-3 bottom-3 flex flex-col lg:flex-row py-1">
-          <input type="text" placeholder="Shorten a link here..." className="my-3 rounded-lg h-10 px-3 lg:grow " />
-          <button type="submit" className="bg-cyan text-white rounded-lg h-10 lg:my-[13.5px] lg:ms-2 lg:p-2">
-            Shorten it!
-          </button>
-        </form>
-      </div>
+      <FormLinks />
       {/* end form input */}
 
       {/* result short link */}
-      <ResultGenerate />
+
       {/* end result short link */}
 
       {/* profit */}
