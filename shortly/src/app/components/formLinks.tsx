@@ -22,6 +22,7 @@ export default function FormLinks() {
   const [inputLink, setInputLink] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [errMsg, setErrMsg] = useState<string>('');
+  const [apiLImit, setApiLimit] = useState<boolean>(false);
 
   const fetchLinks = async () => {
     try {
@@ -33,6 +34,10 @@ export default function FormLinks() {
 
       const responseBody: TypeFetchLinks = await response.json();
       setLinks(responseBody?.data);
+
+      if (inputLink !== responseBody?.data[0]?.destination) {
+        setApiLimit(true);
+      }
     } catch (error) {
       console.log(error);
     } finally {
@@ -54,7 +59,6 @@ export default function FormLinks() {
     });
 
     const responseBody: TypeErrFetch = await response.json();
-    console.log(responseBody);
 
     setErrMsg(responseBody.message);
 
@@ -70,7 +74,7 @@ export default function FormLinks() {
         <form onSubmit={handleSubmit} className="absolute z-10 left-3 top-7 right-3 bottom-3 flex flex-col lg:flex-row py-1">
           <div className="lg:grow ">
             <input type="text" onChange={handleInput} placeholder="Shorten a link here..." className="my-3 rounded-lg h-10 px-3 w-full lg:mb-1" />
-            {errMsg ? <p className="text-red lg:ps-2">{errMsg}</p> : null}
+            {apiLImit ? <p className="text-red lg:ps-2">API requests are already limited</p> : errMsg ? <p className="text-red lg:ps-2">{errMsg}</p> : null}
           </div>
           <button type="submit" className="bg-cyan text-white rounded-lg h-10 lg:my-[13.5px] lg:ms-2 lg:p-2">
             Shorten it!
